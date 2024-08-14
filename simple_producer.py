@@ -6,16 +6,15 @@ import uuid_utils as uuid
 
 
 def generate_list_of_dict() -> dict[str, str]:
+
     fake = Faker(locale='ru_RU')
 
-    dict_ = {
+    return {
         'uuid': str(uuid.uuid7()),
         'first_name': fake.first_name(),
         'last_name': fake.last_name(),
         'middle_name': fake.middle_name(),
     }
-
-    return dict_
 
 
 # Define the Kafka configuration
